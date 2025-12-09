@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="screen1" class="screen">
+        <h1>Happy Birthday! ❤️</h1>
+        <p>Mere paas tumhare liye kuch special hai...</p>
+        <img src="https://media.tenor.com/On7KVX2QeWAAAAAj/mocha-bear.gif" alt="Bear" class="sticker">
+        <br>
+        <button onclick="nextScreen(2)">Open Gift 🎁</button>
+    </div>
+
+    <div id="screen2" class="screen hidden">
+        <h2>A Letter for You 💌</h2>
+        <div class="letter-box">
+            <p>My Dearest,</p>
+            <p>Happy Birthday! Tum meri life mein bohot saari khushiyan lekar aayi ho. You are the best thing that happened to me.</p>
+            <p>Lots of love,<br><strong>Lavish ❤️</strong></p>
+        </div>
+        <button onclick="nextScreen(3)">Aage badho ✨</button>
+    </div>
+
+    <div id="screen3" class="screen hidden">
+        <h2>Cake Time! 🎂</h2>
+        <p>Knife par click karke cake cut karo!</p>
+        
+        <div class="cake-container">
+            <div class="cake" id="birthdayCake">🎂</div>
+            <div class="knife" id="knife" onclick="cutCake()">🔪</div>
+        </div>
+        
+        <div id="cutMessage" class="hidden">
+            <h3>Yay! Happy Birthday! 🎉</h3>
+            <button onclick="nextScreen(4)">Make a Wish 🕯️</button>
+        </div>
+    </div>
+
+    <div id="screen4" class="screen hidden">
+        <h2>Birthday Surprise 🎶</h2>
+        
+        <div class="card-container">
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">💖</div>
+                    <div class="flip-card-back">You are Beautiful!</div>
+                </div>
+            </div>
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">🥰</div>
+                    <div class="flip-card-back">I Love You!</div>
+                </div>
+            </div>
+        </div>
+
+        <button onclick="nextScreen(5)" style="margin-top: 20px;">Last Surprise 🎁</button>
+    </div>
+
+    <div id="screen5" class="screen hidden">
+        <h1>Always Yours! ❤️</h1>
+        <img src="https://media.tenor.com/N710q3Y_VlUAAAAj/love-hearts.gif" alt="Love" class="sticker">
+        <p>Enjoy your day baby!</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
